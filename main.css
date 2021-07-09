@@ -1,0 +1,35 @@
+body{
+   font-family: 'Sigmar One', cursive;
+   background: rgb(46, 45, 45);
+   text-align: center;
+   color: white;
+   max-width: 1920px;
+}
+
+.main-text{
+   margin-top: 210px;
+   background: url(3.jpg);
+   font-size: 150px;
+   color: transparent;
+   -webkit-background-clip: text;
+   animation: animate 12s infinite linear;
+}
+
+@keyframes animate{
+   from{
+      background-position: 0 0;
+   }
+
+   to{
+      background-position: 100% 100%;
+   }
+}
+
+.main-text--second{
+   margin-top: 100px;
+   background: url(4.jpg);
+   font-size: 150px;
+   color: transparent;
+   -webkit-background-clip: text;
+   animation: animate 15s infinite linear;
+}
