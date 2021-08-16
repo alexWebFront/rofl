@@ -4,15 +4,15 @@
 }
 
 body {
-  max-width: 1920px;
+  /* max-width: 1920px; */
   margin: 0;
   padding: 0;
   /* height: 1000px; */
 }
 
 .wrapper {
-  text-align: center;
-}
+  /* text-align: center; */
+} 
 
 /* По тексту бегает картинка */
 /* 
@@ -72,7 +72,7 @@ body {
 
 /* волновой эффект */
 
-.wrapper{
+/* .wrapper {
   padding-top: 50px;
 }
 
@@ -104,13 +104,13 @@ body {
   background: url(./live.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  transition: 2.5s linear;
+  transition: 3s linear;
 }
 
 .overlay:hover {
   opacity: 0;
-  transition: 2.5s linear;
-}
+  transition: 0.5s linear;
+} */
 
 /* алладин с джином */
 
@@ -293,3 +293,160 @@ body {
   height: 110%;
   transition: all 0.1s ease;
 } */
+
+.image {
+  display: flex;
+  position: relative;
+  width: 1920px;
+}
+
+.image__1 {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: width 2s, z-index 2s;
+}
+
+.image__2 {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  transition: width 2s, z-index 2s;
+}
+
+.image__class {
+  height: 800px;
+  width: 100%;
+}
+
+.image__1:hover{
+  width: 70%;
+  z-index: 100;
+  transition: width 2s;
+  /* transition-delay: 0.8s; */
+}
+
+.image__2:hover {
+  width: 70%;
+  z-index: 100;
+  transition: width 2s;
+  /* transition-delay: 0.8s; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes good {
+  0% {
+    width: 50%;
+    z-index: 1;
+  }
+
+  30%{
+    z-index: 5;
+  }
+
+  100% {
+    width: 70%;
+    z-index: 5;
+  }
+}
+
+@keyframes back {
+  0% {
+    width: 70%;
+    z-index: 5;
+  }
+
+  30%{
+    z-index: 1;
+  }
+
+  100% {
+    width: 50%;
+    z-index: 1;
+  }
+}
+ */
+
+
+
+
+
+
+/* @keyframes bad {
+  from {
+    width: 50%;
+    z-index: 1;
+  }
+
+  to {
+    width: 70%;
+    z-index: 5;
+  }
+} */
+
+.text {
+  position: absolute;
+  width: 870px;
+  top: 358px;
+  left: 200px;
+  opacity: 0;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 24px;
+  color: #ffffff;
+  animation: textEnd 0.3s forwards;
+}
+
+.text-2{
+  width: 577px;
+  left: 300px;
+}
+
+.image__1:hover .text {
+  opacity: 1;
+  animation: textStart 1s forwards;
+}
+
+.image__2:hover .text {
+  opacity: 1;
+  animation: textStart 1s forwards;
+}
+
+@keyframes textStart {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textEnd {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
